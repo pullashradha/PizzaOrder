@@ -1,6 +1,6 @@
-# (Project Name) Webpage
+# Pizza Order Webpage
 
-#### (Week Name) Independent Project for Epicodus, 00/00/2016
+#### Object-Oriented JavaScript Independent Project for Epicodus, 06/16/2016
 
 #### By Shradha Pulla
 
@@ -31,12 +31,13 @@ Contact Epicodus for support in running this program.
 * HTML
 * CSS
 * Bootstrap
+* Font Awesome
 * jQuery
 * JavaScript
 
 ## Links
 
-Git Hub Webpage: http://pullashradha.github.io/
+Git Hub Webpage: http://pullashradha.github.io/Pizza-Order
 
 ### License
 
