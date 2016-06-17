@@ -25,7 +25,7 @@ Pizza.prototype.customCost = function () {
   } else if (this.cheese === "light-cheese") {
     this.price += 0.5;
   } else if (this.cheese === "heavy-cheese") {
-    this.price +=1.5
+    this.price += 1.5
   }
   if (this.veggie1 === "onions" | this.veggie1 === "green-peppers" || this.veggie1 === "olives" || this.veggie1 === "spinach" || this.veggie1 === "mushrooms") {
     this.price += 1;
@@ -86,10 +86,15 @@ $(document).ready(function(event) {
     var veggie2 = $("select#veggie2").val();
     var meat = $("select#meat").val();
     var newPizza = new Pizza(customSize, sauce, cheese, veggie1, veggie2, meat);
+    var pizzaDetails = (customSize + "- " + sauce + " sauce, " + cheese + ", " + veggie1 + ", " + veggie2 + ", " + meat);
     newPizza.customCost();
+    $("#order-details").show();
     $("#final-cost").text(newPizza.price);
-    $("#custom-pizza").slideToggle();
+    $("#pizza-details").text(pizzaDetails);
     $("#size, #sauce, #cheese, #veggie1, #veggie2, #meat").val("");
+  });
+  $("#pizza-details-dropdown").click(function(event) {
+    $("#pizza-details").slideToggle();
   });
   $("#cheese-default").click(function(event) {
     $("#cheese-default-size").slideToggle();

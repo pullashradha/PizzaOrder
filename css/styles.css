@@ -48,8 +48,12 @@ body {
   margin-bottom: 50px;
 }
 
-#address {
+#address, #order-details, #pizza-details {
   display: none;
+}
+
+#order-details {
+  text-align: left;
 }
 
 #address-form {
