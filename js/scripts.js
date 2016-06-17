@@ -10,27 +10,27 @@ function Pizza (customSize, sauce, cheese, veggie1, veggie2, meat) {
 }
 
 Pizza.prototype.customCost = function () {
-  if (this.customSize === "small") {
+  if (this.customSize === "Small 10 in.") {
     this.price += 6;
-  } else if (this.customSize === "medium") {
+  } else if (this.customSize === "Medium 14 in.") {
     this.price += 9;
-  } else if (this.customSize === "large") {
+  } else if (this.customSize === "Large 18 in.") {
     this.price += 12;
   }
-  if (this.sauce === "tomato" || this.sauce === "alfredo") {
+  if (this.sauce === "tomato sauce" || this.sauce === "alfredo sauce") {
     this.price += 1;
   }
   if (this.cheese === "cheese") {
     this.price += 1;
-  } else if (this.cheese === "light-cheese") {
+  } else if (this.cheese === "light cheese") {
     this.price += 0.5;
-  } else if (this.cheese === "heavy-cheese") {
+  } else if (this.cheese === "heavy cheese") {
     this.price += 1.5
   }
-  if (this.veggie1 === "onions" | this.veggie1 === "green-peppers" || this.veggie1 === "olives" || this.veggie1 === "spinach" || this.veggie1 === "mushrooms") {
+  if (this.veggie1 === "onions" | this.veggie1 === "green peppers" || this.veggie1 === "olives" || this.veggie1 === "spinach" || this.veggie1 === "mushrooms") {
     this.price += 1;
   }
-  if (this.veggie2 === "onions" | this.veggie2 === "green-peppers" || this.veggie2 === "olives" || this.veggie2 === "spinach" || this.veggie2 === "mushrooms") {
+  if (this.veggie2 === "onions" | this.veggie2 === "green peppers" || this.veggie2 === "olives" || this.veggie2 === "spinach" || this.veggie2 === "mushrooms") {
     this.price += 1;
   }
   if (this.meat === "chicken" || this.meat === "pepperoni" || this.meat === "bacon" || this.meat === "sausage") {
@@ -86,7 +86,7 @@ $(document).ready(function(event) {
     var veggie2 = $("select#veggie2").val();
     var meat = $("select#meat").val();
     var newPizza = new Pizza(customSize, sauce, cheese, veggie1, veggie2, meat);
-    var pizzaDetails = (customSize + "- " + sauce + " sauce, " + cheese + ", " + veggie1 + ", " + veggie2 + ", " + meat);
+    var pizzaDetails = (customSize + " - " + sauce + ", " + cheese + ", " + veggie1 + ", " + veggie2 + ", " + meat);
     newPizza.customCost();
     $("#order-details").show();
     $("#final-cost").text(newPizza.price);
@@ -94,7 +94,7 @@ $(document).ready(function(event) {
     $("#size, #sauce, #cheese, #veggie1, #veggie2, #meat").val("");
   });
   $("#pizza-details-dropdown").click(function(event) {
-    $("#pizza-details").slideToggle();
+    $("#pizza-details").toggle();
   });
   $("#cheese-default").click(function(event) {
     $("#cheese-default-size").slideToggle();
