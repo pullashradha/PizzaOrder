@@ -22,7 +22,8 @@ body {
   /*display: none;*/
   color: #000000;
   background-color: #FFFFFF;
-  margin-top: 200px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   text-align: center;
 }
 
@@ -50,6 +51,19 @@ body {
 #custom-pizza {
   /*display: none;*/
   margin-top: 30px;
+}
+
+#custom-pizza {
+  border-style: solid;
+  border-color: #990099;
+  border-radius: 15%;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+#form-content {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 select {
