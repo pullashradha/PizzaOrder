@@ -8,7 +8,6 @@ function Pizza (customSize, sauce, cheese, veggie1, veggie2, meat) {
   this.meat = meat;
   this.price = 0;
 }
-
 Pizza.prototype.customCost = function () {
   if (this.customSize === "Small 10 in.") {
     this.price += 6;
@@ -37,7 +36,6 @@ Pizza.prototype.customCost = function () {
     this.price += 2;
   }
 }
-
 Pizza.prototype.defaultCostSm = function () {
   this.price += 8;
 }

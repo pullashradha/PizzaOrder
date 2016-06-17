@@ -19,7 +19,7 @@ body {
 }
 
 #order-content {
-  /*display: none;*/
+  display: none;
   color: #000000;
   background-color: #FFFFFF;
   margin-top: 100px;
