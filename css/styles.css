@@ -87,6 +87,14 @@ select {
   margin-top: 15px;
 }
 
+.pizza-option, .side-option {
+  width: 170px;
+  height: 180px;
+  font-size: 20pt;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 #footer {
   margin-top: 100px;
 }
