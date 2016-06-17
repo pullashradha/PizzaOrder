@@ -53,79 +53,81 @@
           </div>
           <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button>
   <!-- Custom Pizza Form Start -->
-          <form class="form-group" id="custom-pizza">
-            <div id="form-content">
-              <h3 id="form-header">Custom Pizza Form</h3>
-              <div class="row container">
-                <div class="col-xs-6">
-                  <p>Size</p>
+          <div id="custom-pizza">
+            <form class="form-group">
+              <div id="form-content">
+                <h3 id="form-header">Custom Pizza Form</h3>
+                <div class="row container">
+                  <div class="col-xs-6">
+                    <p>Size</p>
+                  </div>
+                  <div class="col-xs-6" class="form-option">
+                    <select class="form-control" id="size">
+                      <option></option>
+                      <option value="small">Small, 10"</option>
+                      <option value="medium">Medium, 14"</option>
+                      <option value="large">Large, 18"</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="col-xs-6" class="form-option">
-                  <select class="form-control" id="size">
-                    <option></option>
-                    <option value="small">Small, 10"</option>
-                    <option value="medium">Medium, 14"</option>
-                    <option value="large">Large, 18"</option>
-                  </select>
+                <div class="row container">
+                  <div class="col-xs-6">
+                    <p>Sauce</p>
+                  </div>
+                  <div class="col-xs-6" class="form-option">
+                    <select class="form-control" id="sauce">
+                      <option></option>
+                      <option value="tomato">Tomato</option>
+                      <option value="alfredo">Alfredo</option>
+                      <option value="no-sauce">None</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row container">
+                  <div class="col-xs-6">
+                    <p>Topping 1</p>
+                  </div>
+                  <div class="col-xs-6" class="form-option">
+                    <select class="form-control" id="topping1">
+                      <option></option>
+                      <option value="cheese">Cheese</option>
+                      <option value="light-cheese">Light Cheese</option>
+                      <option value="no-cheese">None</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row container">
+                  <div class="col-xs-6">
+                    <p>Topping 2 (+$1)</p>
+                  </div>
+                  <div class="col-xs-6" class="form-option">
+                    <select class="form-control" id="topping2">
+                      <option></option>
+                      <option value="pepperoni">Pepperoni</option>
+                      <option value="ham">Ham</option>
+                      <option value="sausage">Sausage</option>
+                      <option value="none">None</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row container">
+                  <div class="col-xs-6">
+                    <p>Topping 3 (+$1)</p>
+                  </div>
+                  <div class="col-xs-6" class="form-option">
+                    <select class="form-control" id="topping3">
+                      <option></option>
+                      <option value="green-peppers">Green Peppers</option>
+                      <option value="olives">Black Olives</option>
+                      <option value="spinach">Spinach</option>
+                      <option value="none">None</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              <div class="row container">
-                <div class="col-xs-6">
-                  <p>Sauce</p>
-                </div>
-                <div class="col-xs-6" class="form-option">
-                  <select class="form-control" id="sauce">
-                    <option></option>
-                    <option value="tomato">Tomato</option>
-                    <option value="alfredo">Alfredo</option>
-                    <option value="no-sauce">None</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row container">
-                <div class="col-xs-6">
-                  <p>Topping 1</p>
-                </div>
-                <div class="col-xs-6" class="form-option">
-                  <select class="form-control" id="topping1">
-                    <option></option>
-                    <option value="cheese">Cheese</option>
-                    <option value="light-cheese">Light Cheese</option>
-                    <option value="no-cheese">None</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row container">
-                <div class="col-xs-6">
-                  <p>Topping 2 (+$1)</p>
-                </div>
-                <div class="col-xs-6" class="form-option">
-                  <select class="form-control" id="topping2">
-                    <option></option>
-                    <option value="pepperoni">Pepperoni</option>
-                    <option value="ham">Ham</option>
-                    <option value="sausage">Sausage</option>
-                    <option value="none">None</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row container">
-                <div class="col-xs-6">
-                  <p>Topping 3 (+$1)</p>
-                </div>
-                <div class="col-xs-6" class="form-option">
-                  <select class="form-control" id="topping3">
-                    <option></option>
-                    <option value="green-peppers">Green Peppers</option>
-                    <option value="olives">Black Olives</option>
-                    <option value="spinach">Spinach</option>
-                    <option value="none">None</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+            </form>
             <button type="btn" class="btn btn-danger" id="submit-custom-pizza">Submit</button>
-          </form>
+          </div>
   <!-- Custom Pizza Form End -->
         </div>
         <div class="col-xs-2" class="thumbnail">

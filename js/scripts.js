@@ -59,7 +59,6 @@ $(document).ready(function(event) {
   });
 
   $("#submit-custom-pizza").click(function(event) {
-    debugger;
     var size = $("select#size").val();
     var sauce = $("select#sauce").val();
     var topping1 = $("select#topping1").val();
