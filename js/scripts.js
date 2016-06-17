@@ -77,4 +77,15 @@ $(document).ready(function(event) {
     $("#final-cost").text(newCustomPizza.price);
     $("#custom-pizza").slideToggle();
   });
+  $("#cheese-default").click(function(event) {
+    $("#cheese-default-size").slideToggle();
+  });
+  $("#pep-default").click(function(event) {
+    $("#pep-default-size").slideToggle();
+  });
+  $("#veggie-default").click(function(event) {
+    $("#veggie-default-size").slideToggle();
+  });
+
+
 });

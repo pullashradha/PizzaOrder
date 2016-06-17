@@ -19,7 +19,7 @@ body {
 }
 
 #order-content {
-  display: none;
+  /*display: none;*/
   color: #000000;
   background-color: #FFFFFF;
   margin-top: 100px;
@@ -70,6 +70,12 @@ body {
   margin-bottom: 100px;
 }
 
+#checkout-btn {
+  font-size: 20pt;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
 #submit-custom-pizza {
   margin-bottom: 35px;
 }
@@ -83,6 +89,15 @@ body {
   border-radius: 15%;
   margin-left: 70px;
   margin-right: 70px;
+}
+
+.indiv-pizza-default {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#cheese-default-size, #pep-default-size, #veggie-default-size {
+  display: none;
 }
 
 #form-content {
