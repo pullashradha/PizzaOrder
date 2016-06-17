@@ -55,6 +55,7 @@ Pizza.prototype.sidesCost = function () {
 
 //User Interface Logic
 $(document).ready(function(event) {
+/////Landing Page Btns
   $("#pickup-btn").click(function(event) {
     $("#order-content").show();
     $("#landing-content").hide();
@@ -75,6 +76,7 @@ $(document).ready(function(event) {
     $("#delivery-option").text("DELIVER TO: ");
     $("#delivery-option").append(deliveryAddress);
   });
+/////Custom Pizza Btns
   $("#custom-pizza-btn").click(function(event) {
     $("#custom-pizza").slideToggle();
   });
@@ -96,6 +98,7 @@ $(document).ready(function(event) {
   $("#pizza-details-dropdown").click(function(event) {
     $("#pizza-details").toggle();
   });
+/////Default Pizza Toggle Btns
   $("#cheese-default").click(function(event) {
     $("#cheese-default-size").slideToggle();
   });
@@ -105,12 +108,13 @@ $(document).ready(function(event) {
   $("#veggie-default").click(function(event) {
     $("#veggie-default-size").slideToggle();
   });
+/////Cheese Default Pizza
   $("#cheese-sm").click(function(event) {
     var newDefaultPizzaSm = new Pizza();
     newDefaultPizzaSm.defaultCostSm();
     $("#final-cost").text(newDefaultPizzaSm.price);
     $("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese")
+    $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese");
     $("#cheese-default-size").slideToggle();
   });
   $("#cheese-md").click(function(event) {
@@ -118,22 +122,24 @@ $(document).ready(function(event) {
     newDefaultPizzaMd.defaultCostMd();
     $("#final-cost").text(newDefaultPizzaMd.price);
     $("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese")
+    $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese");
     $("#cheese-default-size").slideToggle();
   });
   $("#cheese-lg").click(function(event) {
     var newDefaultPizzaLg = new Pizza ();
     newDefaultPizzaLg.defaultCostLg();
-    $("#final-cost").text(newDefaultPizzaLg.price);$("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese")
+    $("#final-cost").text(newDefaultPizzaLg.price);
+    $("#default-pizza-dropdown").show();
+    $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese");
     $("#cheese-default-size").slideToggle();
   });
+/////Pepperoni Default Pizza
   $("#pep-sm").click(function(event) {
     var newDefaultPizzaSm = new Pizza();
     newDefaultPizzaSm.defaultCostSm();
     $("#final-cost").text(newDefaultPizzaSm.price);
     $("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese, pepperoni")
+    $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese, pepperoni");
     $("#pep-default-size").slideToggle();
   });
   $("#pep-md").click(function(event) {
@@ -141,22 +147,24 @@ $(document).ready(function(event) {
     newDefaultPizzaMd.defaultCostMd();
     $("#final-cost").text(newDefaultPizzaMd.price);
     $("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese, pepperoni")
+    $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese, pepperoni");
     $("#pep-default-size").slideToggle();
   });
   $("#pep-lg").click(function(event) {
     var newDefaultPizzaLg = new Pizza ();
     newDefaultPizzaLg.defaultCostLg();
-    $("#final-cost").text(newDefaultPizzaLg.price);$("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese, pepperoni")
+    $("#final-cost").text(newDefaultPizzaLg.price);
+    $("#default-pizza-dropdown").show();
+    $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese, pepperoni");
     $("#pep-default-size").slideToggle();
   });
+/////Veggie Default Pizza
   $("#veggie-sm").click(function(event) {
     var newDefaultPizzaSm = new Pizza();
     newDefaultPizzaSm.defaultCostSm();
     $("#final-cost").text(newDefaultPizzaSm.price);
     $("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms")
+    $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms");
     $("#veggie-default-size").slideToggle();
   });
   $("#veggie-md").click(function(event) {
@@ -164,23 +172,43 @@ $(document).ready(function(event) {
     newDefaultPizzaMd.defaultCostMd();
     $("#final-cost").text(newDefaultPizzaMd.price);
     $("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms")
+    $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms");
     $("#veggie-default-size").slideToggle();
   });
   $("#veggie-lg").click(function(event) {
     var newDefaultPizzaLg = new Pizza ();
     newDefaultPizzaLg.defaultCostLg();
-    $("#final-cost").text(newDefaultPizzaLg.price);$("#default-pizza-dropdown").show();
-    $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms")
+    $("#final-cost").text(newDefaultPizzaLg.price);
+    $("#default-pizza-dropdown").show();
+    $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms");
     $("#veggie-default-size").slideToggle();
   });
-  // $("#breadsticks, #brownie, #soda").click(function(event) {
-  //   var newSides = new Pizza ();
-  //   newSides.sidesCost();
-  //   $("#final-cost").text(newSides.price);
-  // });
-
   $("#default-pizza-dropdown").click(function(event) {
     $("#default-pizza-details").toggle();
+  });
+/////Sides
+  $("#breadsticks").click(function(event) {
+    var newSides = new Pizza ();
+    newSides.sidesCost();
+    $("#final-cost").text(newSides.price);
+    $("#sides-dropdown").show();
+    $("#sides-details").text("3 garlic breadsticks");
+  });
+  $("#brownie").click(function(event) {
+    var newSides = new Pizza ();
+    newSides.sidesCost();
+    $("#final-cost").text(newSides.price);
+    $("#sides-dropdown").show();
+    $("#sides-details").text("1 jumbo, double-chocolate brownie");
+  });
+  $("#soda").click(function(event) {
+    var newSides = new Pizza ();
+    newSides.sidesCost();
+    $("#final-cost").text(newSides.price);
+    $("#sides-dropdown").show();
+    $("#sides-details").text("16oz., root-beer italian soda");
+  });
+  $("#sides-dropdown").click(function(event) {
+    $("#sides-details").toggle();
   });
 });

@@ -19,7 +19,7 @@ body {
 }
 
 #order-content {
-  /*display: none;*/
+  display: none;
   color: #000000;
   background-color: #FFFFFF;
   margin-top: 100px;
@@ -48,7 +48,7 @@ body {
   margin-bottom: 50px;
 }
 
-#address, #pizza-details-dropdown, #pizza-details, #default-pizza-dropdown, #default-pizza-details {
+#address, #pizza-details-dropdown, #pizza-details, #default-pizza-dropdown, #default-pizza-details, #sides-dropdown, #sides-details {
   display: none;
 }
 
