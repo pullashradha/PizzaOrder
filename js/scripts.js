@@ -127,21 +127,18 @@ $(document).ready(function(event) {
     $("#final-cost").text(newCheesePizzaSm.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese");
-    $("#cheese-default-size").slideToggle();
   });
   $("#cheese-md").click(function(event) {
     newCheesePizzaMd.defaultCostMd();
     $("#final-cost").text(newCheesePizzaMd.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese");
-    $("#cheese-default-size").slideToggle();
   });
   $("#cheese-lg").click(function(event) {
     newCheesePizzaLg.defaultCostLg();
     $("#final-cost").text(newCheesePizzaLg.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese");
-    $("#cheese-default-size").slideToggle();
   });
 /////Pepperoni Default Pizza
   $("#pep-sm").click(function(event) {
@@ -149,21 +146,18 @@ $(document).ready(function(event) {
     $("#final-cost").text(newPepPizzaSm.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese, pepperoni");
-    $("#pep-default-size").slideToggle();
   });
   $("#pep-md").click(function(event) {
     newPepPizzaMd.defaultCostMd();
     $("#final-cost").text(newPepPizzaMd.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese, pepperoni");
-    $("#pep-default-size").slideToggle();
   });
   $("#pep-lg").click(function(event) {
     newPepPizzaLg.defaultCostLg();
     $("#final-cost").text(newPepPizzaLg.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese, pepperoni");
-    $("#pep-default-size").slideToggle();
   });
 /////Veggie Default Pizza
   $("#veggie-sm").click(function(event) {
@@ -171,21 +165,18 @@ $(document).ready(function(event) {
     $("#final-cost").text(newVeggiePizzaSm.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Small 10 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms");
-    $("#veggie-default-size").slideToggle();
   });
   $("#veggie-md").click(function(event) {
     newVeggiePizzaMd.defaultCostMd();
     $("#final-cost").text(newVeggiePizzaMd.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Medium 14 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms");
-    $("#veggie-default-size").slideToggle();
   });
   $("#veggie-lg").click(function(event) {
     newVeggiePizzaLg.defaultCostLg();
     $("#final-cost").text(newVeggiePizzaLg.price);
     $("#default-pizza-dropdown").show();
     $("#default-pizza-details").text("Large 18 in. - tomato sauce, cheese, onions, green peppers, olives, spinach, mushrooms");
-    $("#veggie-default-size").slideToggle();
   });
   $("#default-pizza-dropdown").click(function(event) {
     $("#default-pizza-details").toggle();
