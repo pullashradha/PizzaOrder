@@ -27,7 +27,7 @@ If the user clicks on any of the standard pizza or side menu buttons, a slide do
 If the user clicks the "Add" button on the slide down price bar, the price of the item is added to the final price total bar in the right column | ----- | ------
 If the user clicks on the "Custom Pizza" button, a dropdown form will appear | ----- | -----
 The user can customize their pizza according to the options given in the form | ----- | -----
-Once the user clicks the "Submit" button on the custom pizza form, the total price of the custom order is added to the total bar in the right column | ----- | -----
+Once the user clicks the "Submit" button on the custom pizza form, the total price of the custom order is added to the total bar in the right column, the form refreshes and hides | ----- | -----
 The custom pizza form will reset upon clicking the "Submit" button, so the user may create as many custom pizza orders as they want | ----- | -----
 
 ## Support and Contact Details

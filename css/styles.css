@@ -57,7 +57,7 @@ body {
 }
 
 #custom-pizza {
-  /*display: none;*/
+  display: none;
   margin-top: 30px;
   border-style: solid;
   border-color: #006699;
