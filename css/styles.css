@@ -60,7 +60,8 @@ body {
   display: none;
   margin-top: 30px;
   border-style: solid;
-  border-color: #000000;
+  border-color: #006699;
+  background-color: #006699;
   border-radius: 15%;
   margin-left: 70px;
   margin-right: 70px;
@@ -73,6 +74,8 @@ body {
 }
 
 #form-header {
+  color: #FFFFFF;
+  font-size: 20pt;
   margin-bottom: 35px;
 }
 
