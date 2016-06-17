@@ -3,6 +3,19 @@
 
 //User Interface Logic
 $(document).ready(function(event) {
-  event.preventDefault();
+
+  $("#pickup-btn").click(function(event) {
+    $("#order-content").show();
+    $("#landing-content").hide();
+  });
+
+  $("#delivery-btn").click(function(event) {
+    $("#address").slideToggle();
+  });
+
+  $("#order-proceed-btn").click(function(event) {
+    $("#order-content").show();
+    $("#landing-content").hide();
+  });
 
 });
