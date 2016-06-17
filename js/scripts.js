@@ -41,13 +41,14 @@ Pizza.prototype.customCost = function () {
 Pizza.prototype.defaultCostSm = function () {
   this.price += 8;
 }
-
 Pizza.prototype.defaultCostMd = function () {
   this.price += 12;
 }
-
 Pizza.prototype.defaultCostLg = function () {
   this.price += 15;
+}
+Pizza.prototype.sidesCost = function () {
+  this.price += 3;
 }
 
 
@@ -112,5 +113,10 @@ $(document).ready(function(event) {
     var newDefaultPizzaLg = new Pizza ();
     newDefaultPizzaLg.defaultCostLg();
     $("#final-cost").text(newDefaultPizzaLg.price);
+  });
+  $("#breadsticks, #brownie, #soda").click(function(event) {
+    var newSides = new Pizza ();
+    newSides.sidesCost();
+    $("#final-cost").text(newSides.price);
   });
 });
