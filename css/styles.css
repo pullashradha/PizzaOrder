@@ -19,12 +19,17 @@ body {
 }
 
 #order-content {
-  /*display: none;*/
+  display: none;
   color: #000000;
   background-color: #FFFFFF;
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
+}
+
+#price-content {
+  display: none;
+  margin-top: 100px;
 }
 
 .page-header {
@@ -49,13 +54,13 @@ body {
 }
 
 #custom-pizza {
-  /*display: none;*/
+  display: none;
   margin-top: 30px;
 }
 
 #custom-pizza {
   border-style: solid;
-  border-color: #990099;
+  border-color: #000000;
   border-radius: 15%;
   margin-left: 70px;
   margin-right: 70px;
