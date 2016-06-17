@@ -18,4 +18,8 @@ $(document).ready(function(event) {
     $("#landing-content").hide();
   });
 
+  $("#custom-pizza-btn").click(function(event) {
+    $("#custom-pizza").slideToggle();
+  });
+
 });

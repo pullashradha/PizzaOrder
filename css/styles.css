@@ -47,6 +47,11 @@ body {
   display: none;
 }
 
+#custom-pizza {
+  display: none;
+  margin-top: 25px;
+}
+
 #footer {
   margin-top: 100px;
 }
