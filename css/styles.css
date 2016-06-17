@@ -28,7 +28,6 @@ body {
 }
 
 #price-content {
-  display: none;
   margin-top: 100px;
 }
 
@@ -38,7 +37,7 @@ body {
   padding-bottom: 35px;
 }
 
-#pickup-btn, #delivery-btn, #order-proceed-btn, #custom-pizza-btn {
+#pickup-btn, #delivery-btn, #order-proceed-btn, #custom-pizza-btn, #submit-custom-pizza {
   font-size: 20pt;
   margin-top: 30px;
 }
@@ -53,12 +52,13 @@ body {
   display: none;
 }
 
-#custom-pizza {
-  display: none;
-  margin-top: 30px;
+#submit-custom-pizza {
+  margin-bottom: 35px;
 }
 
 #custom-pizza {
+  display: none;
+  margin-top: 30px;
   border-style: solid;
   border-color: #000000;
   border-radius: 15%;
