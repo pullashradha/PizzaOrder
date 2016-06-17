@@ -1,10 +1,11 @@
 // Business Logic
-function CustomPizza (size, sauce, topping1, topping2, topping3) {
+function CustomPizza (size, sauce, cheese, veggie1, veggie2, meat) {
   this.pizzaSize = size;
   this.sauce = sauce;
-  this.topping1 = topping1;
-  this.topping2 = topping2;
-  this.topping3 = topping3;
+  this.cheese = cheese;
+  this.veggie1 = veggie1;
+  this.veggie2 = veggie2;
+  this.meat = meat;
   this.price = 0;
 }
 
@@ -19,16 +20,21 @@ CustomPizza.prototype.costCustom = function() {
   if (this.sauce === "tomato" || this.sauce === "alfredo") {
     this.price += 1;
   }
-  if (this.topping1 === "cheese") {
+  if (this.cheese === "cheese") {
     this.price += 1;
-  } else if (this.topping1 === "light-cheese") {
+  } else if (this.cheese === "light-cheese") {
     this.price += 0.5;
+  } else if (this.cheese === "heavy-cheese") {
+    this.price +=1.5
   }
-  if (this.topping2 === "pepperoni" || this.topping2 === "ham" || this.topping2 === "sausage") {
+  if (this.veggie1 === "onions" | this.veggie1 === "green-peppers" || this.veggie1 === "olives" || this.veggie1 === "spinach" || this.veggie1 === "mushrooms") {
     this.price += 1;
   }
-  if (this.topping3 === "green-peppers" || this.topping3 === "olives" || this.topping3 === "spinach") {
-    this.price +=1;
+  if (this.veggie2 === "onions" | this.veggie2 === "green-peppers" || this.veggie2 === "olives" || this.veggie2 === "spinach" || this.veggie2 === "mushrooms") {
+    this.price += 1;
+  }
+  if (this.meat === "chicken" || this.meat === "pepperoni" || this.meat === "bacon" || this.meat === "sausage") {
+    this.price += 2;
   }
 }
 
@@ -36,7 +42,6 @@ CustomPizza.prototype.costCustom = function() {
 
 //User Interface Logic
 $(document).ready(function(event) {
-
   $("#pickup-btn").click(function(event) {
     $("#order-content").show();
     $("#landing-content").hide();
@@ -51,9 +56,7 @@ $(document).ready(function(event) {
     var cityAddress = $("input#city-add").val();
     var stateAddress = $("select#state-select").val();
     var zipCode = $("input#zip-add").val();
-
     var deliveryAddress = (streetAddress + "  " + cityAddress + ", " + stateAddress + "  " + zipCode);
-
     $("#order-content").show();
     $("#landing-content").hide();
     $("#delivery-option").text("DELIVER TO: ");
@@ -62,20 +65,16 @@ $(document).ready(function(event) {
   $("#custom-pizza-btn").click(function(event) {
     $("#custom-pizza").slideToggle();
   });
-
   $("#submit-custom-pizza").click(function(event) {
-    event.preventDefault();
     var size = $("select#size").val();
     var sauce = $("select#sauce").val();
-    var topping1 = $("select#topping1").val();
-    var topping2 = $("select#topping2").val();
-    var topping3 = $("select#topping3").val();
-
-    var newCustomPizza = new CustomPizza(size, sauce, topping1, topping2, topping3);
+    var cheese = $("select#cheese").val();
+    var veggie1 = $("select#veggie1").val();
+    var veggie2 = $("select#veggie2").val();
+    var meat = $("select#meat").val();
+    var newCustomPizza = new CustomPizza(size, sauce, cheese, veggie1, veggie2, meat);
     newCustomPizza.costCustom();
-
     $("#final-cost").text(newCustomPizza.price);
     $("#custom-pizza").slideToggle();
   });
-
 });
