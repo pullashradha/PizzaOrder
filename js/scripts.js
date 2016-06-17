@@ -89,6 +89,7 @@ $(document).ready(function(event) {
     newPizza.customCost();
     $("#final-cost").text(newPizza.price);
     $("#custom-pizza").slideToggle();
+    $("#size, #sauce, #cheese, #veggie1, #veggie2, #meat").val("");
   });
   $("#cheese-default").click(function(event) {
     $("#cheese-default-size").slideToggle();
