@@ -25,7 +25,7 @@
     </div>
 <!-- Navbar End -->
 <!-- Landing Start -->
-    <div class="jumbotron" id="landing-content">
+    <!-- <div class="jumbotron" id="landing-content">
       <h1 class="page-header">Epicodus Pizza</h1>
       <h2>Serving your everyday pizza cravings! Available through online order only.</h2>
       <button type="btn" class="btn btn-primary" id="pickup-btn">Pickup</button>
@@ -34,11 +34,33 @@
         <h3>Delivery Address:</h3><input required class="form-control" type="text" id="delivery-address">
         <button type="btn" class="btn btn-primary" id="order-proceed-btn">Order</button>
       </div>
-    </div>
+    </div> -->
 <!-- Landing End -->
 <!-- Order Content Start -->
     <div class="jumbotron" id="order-content">
-      <h1>Order Options</h1>
+      <h1 class="page-header">Order Options</h1>
+      <div class="row container">
+        <div class="col-xs-9">
+          <h2>Pizza</h2>
+          <div class="row container">
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail"><img src="img/cheese-pizza.jpg" alt="A picture of a cheese pizza."></a>
+            </div>
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail"><img src="img/pep-pizza.jpg" alt="A picture of a pepperoni pizza."></a>
+            </div>
+            <div class="col-xs-4">
+              <a href="#" class="thumbnail"><img src="img/veg-pizza.jpg" alt="A picture of a veggie pizza."></a>
+            </div>
+          </div>
+          <button type="btn" class="btn btn-warning" id="custom-pizza-btn">Custom Pizza</button>
+        </div>
+        <div class="col-xs-3">
+          <h2>Sides</h2>
+
+        </div>
+      </div>
+      <!-- <h1 class="page-header">Final Cost:<span id="final-cost"></span></h1> -->
     </div>
 <!-- Order Content End -->
 <!-- Footer Start -->
