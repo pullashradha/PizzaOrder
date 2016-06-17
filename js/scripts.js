@@ -1,6 +1,6 @@
 // Business Logic
-function CustomPizza (size, sauce, cheese, veggie1, veggie2, meat) {
-  this.pizzaSize = size;
+function Pizza (customSize, sauce, cheese, veggie1, veggie2, meat) {
+  this.customSize = customSize;
   this.sauce = sauce;
   this.cheese = cheese;
   this.veggie1 = veggie1;
@@ -9,12 +9,12 @@ function CustomPizza (size, sauce, cheese, veggie1, veggie2, meat) {
   this.price = 0;
 }
 
-CustomPizza.prototype.costCustom = function() {
-  if (this.pizzaSize === "small") {
+Pizza.prototype.customCost = function () {
+  if (this.customSize === "small") {
     this.price += 6;
-  } else if (this.pizzaSize === "medium") {
+  } else if (this.customSize === "medium") {
     this.price += 9;
-  } else if (this.pizzaSize === "large") {
+  } else if (this.customSize === "large") {
     this.price += 12;
   }
   if (this.sauce === "tomato" || this.sauce === "alfredo") {
@@ -36,6 +36,18 @@ CustomPizza.prototype.costCustom = function() {
   if (this.meat === "chicken" || this.meat === "pepperoni" || this.meat === "bacon" || this.meat === "sausage") {
     this.price += 2;
   }
+}
+
+Pizza.prototype.defaultCostSm = function () {
+  this.price += 8;
+}
+
+Pizza.prototype.defaultCostMd = function () {
+  this.price += 12;
+}
+
+Pizza.prototype.defaultCostLg = function () {
+  this.price += 15;
 }
 
 
@@ -66,15 +78,15 @@ $(document).ready(function(event) {
     $("#custom-pizza").slideToggle();
   });
   $("#submit-custom-pizza").click(function(event) {
-    var size = $("select#size").val();
+    var customSize = $("select#size").val();
     var sauce = $("select#sauce").val();
     var cheese = $("select#cheese").val();
     var veggie1 = $("select#veggie1").val();
     var veggie2 = $("select#veggie2").val();
     var meat = $("select#meat").val();
-    var newCustomPizza = new CustomPizza(size, sauce, cheese, veggie1, veggie2, meat);
-    newCustomPizza.costCustom();
-    $("#final-cost").text(newCustomPizza.price);
+    var newPizza = new Pizza(customSize, sauce, cheese, veggie1, veggie2, meat);
+    newPizza.customCost();
+    $("#final-cost").text(newPizza.price);
     $("#custom-pizza").slideToggle();
   });
   $("#cheese-default").click(function(event) {
@@ -86,6 +98,19 @@ $(document).ready(function(event) {
   $("#veggie-default").click(function(event) {
     $("#veggie-default-size").slideToggle();
   });
-
-
+  $("#cheese-sm, #pep-sm, #veggie-sm").click(function(event) {
+    var newDefaultPizzaSm = new Pizza();
+    newDefaultPizzaSm.defaultCostSm();
+    $("#final-cost").text(newDefaultPizzaSm.price);
+  });
+  $("#cheese-md, #pep-md, #veggie-md").click(function(event) {
+    var newDefaultPizzaMd = new Pizza ();
+    newDefaultPizzaMd.defaultCostMd();
+    $("#final-cost").text(newDefaultPizzaMd.price);
+  });
+  $("#cheese-lg, #pep-lg, #veggie-lg").click(function(event) {
+    var newDefaultPizzaLg = new Pizza ();
+    newDefaultPizzaLg.defaultCostLg();
+    $("#final-cost").text(newDefaultPizzaLg.price);
+  });
 });
