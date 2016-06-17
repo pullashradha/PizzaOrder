@@ -40,14 +40,24 @@ $(document).ready(function(event) {
   $("#pickup-btn").click(function(event) {
     $("#order-content").show();
     $("#landing-content").hide();
+    $("#delivery-option").text("PICKUP BY CUSTOMER");
   });
   $("#delivery-btn").click(function(event) {
     $("#address").show();
     $("#pickup-btn,#delivery-btn,#landing-tagline").hide();
   });
   $("#order-proceed-btn").click(function(event) {
+    var streetAddress = $("input#street-add").val();
+    var cityAddress = $("input#city-add").val();
+    var stateAddress = $("select#state-select").val();
+    var zipCode = $("input#zip-add").val();
+
+    var deliveryAddress = (streetAddress + "  " + cityAddress + ", " + stateAddress + "  " + zipCode);
+
     $("#order-content").show();
     $("#landing-content").hide();
+    $("#delivery-option").text("DELIVER TO: ");
+    $("#delivery-option").append(deliveryAddress);
   });
   $("#custom-pizza-btn").click(function(event) {
     $("#custom-pizza").slideToggle();

@@ -19,7 +19,7 @@ body {
 }
 
 #order-content {
-  /*display: none;*/
+  display: none;
   color: #000000;
   background-color: #FFFFFF;
   margin-top: 100px;
@@ -37,7 +37,7 @@ body {
   padding-bottom: 35px;
 }
 
-#pickup-btn, #delivery-btn, #order-proceed-btn, #custom-pizza-btn, #submit-custom-pizza {
+#pickup-btn, #delivery-btn, #custom-pizza-btn, #submit-custom-pizza {
   font-size: 20pt;
   margin-top: 30px;
 }
@@ -50,6 +50,24 @@ body {
 
 #address {
   display: none;
+}
+
+#address-form {
+  margin-top: 30px;
+}
+
+.address-spacing {
+  margin-bottom: 20px;
+}
+
+#state-select {
+  margin-top: 0px;
+}
+
+#order-proceed-btn {
+  font-size: 20pt;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 #submit-custom-pizza {
