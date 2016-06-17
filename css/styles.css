@@ -19,7 +19,7 @@ body {
 }
 
 #order-content {
-  display: none;
+  /*display: none;*/
   color: #000000;
   background-color: #FFFFFF;
   margin-top: 100px;
@@ -57,7 +57,7 @@ body {
 }
 
 #custom-pizza {
-  display: none;
+  /*display: none;*/
   margin-top: 30px;
   border-style: solid;
   border-color: #006699;
