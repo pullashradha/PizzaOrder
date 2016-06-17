@@ -10,7 +10,8 @@ $(document).ready(function(event) {
   });
 
   $("#delivery-btn").click(function(event) {
-    $("#address").slideToggle();
+    $("#address").show();
+    $("#pickup-btn,#delivery-btn,#landing-tagline").hide();
   });
 
   $("#order-proceed-btn").click(function(event) {
