@@ -23,7 +23,7 @@ Pizza.prototype.customCost = function () {
     this.price += 1;
   } else if (this.cheese === "light cheese") {
     this.price += 0.5;
-  } else if (this.cheese === "heavy cheese") {
+  } else if (this.cheese === "extra cheese") {
     this.price += 1.5
   }
   if (this.veggie1 === "onions" | this.veggie1 === "green peppers" || this.veggie1 === "olives" || this.veggie1 === "spinach" || this.veggie1 === "mushrooms") {
