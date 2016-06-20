@@ -63,7 +63,8 @@ $(document).ready(function(event) {
     $("#address").show();
     $("#pickup-btn,#delivery-btn,#landing-tagline").hide();
   });
-  $("#order-proceed-btn").click(function(event) {
+  $("form#address-form").submit(function(event) {
+    event.preventDefault();
     var streetAddress = $("input#street-add").val();
     var cityAddress = $("input#city-add").val();
     var stateAddress = $("select#state-select").val();
