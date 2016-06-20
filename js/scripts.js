@@ -202,4 +202,9 @@ $(document).ready(function(event) {
   $("#sides-dropdown").click(function(event) {
     $("#sides-details").toggle();
   });
+/////Checkout
+  $("#checkout-btn").click(function(event) {
+    $("#landing-content").show();
+    $("#order-content").hide();
+  })
 });
