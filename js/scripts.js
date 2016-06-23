@@ -66,9 +66,9 @@ $(document).ready(function(event) {
   var newDefaultPizza = new Cost();
   var newCostSides = new Cost();
 /////Custom Pizza Form
-  $("#custom-pizza-btn").click(function() {
-    $("#custom-pizza").slideToggle();
-  });
+  // $("#custom-pizza-btn").click(function() {
+  //   $("#custom-pizza").slideToggle();
+  // });
   $("form#custom-pizza").submit(function(event) {
     event.preventDefault();
     var customSize = $("select#size").val();
