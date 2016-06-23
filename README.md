@@ -25,7 +25,7 @@ Once the user clicks the "Place Order" button on the custom pizza form, the tota
 The program will add $3 to the Cart price when a Sides button is clicked | Cart: Price $, and the user clicks the "Italian Soda" button | Cart: Price $3
 When an item is added to the Cart column, a link with the general item name will appear | Cart, and user clicks on "Brownie" button | Cart: Sides
 The links in the Cart column can be clicked on to view the details of the individual item order | Cart: Sides, and user clicks "Sides" text link | Cart: Sides - "3 garlic breadsticks"
-For each item added to the Cart, the details will append in list form under the proper food category | Cart: Sides - "3 garlic breadsticks", and user clicks "Breadsticks" button   | Cart: Sides - "3 garlic breadsticks", :"3 garlic breadsticks"
+For each item added to the Cart, the details will append in list form under the proper food category | Cart: Sides - "3 garlic breadsticks", and user clicks "Breadsticks" button   | Cart: Sides - "3 garlic breadsticks"; "3 garlic breadsticks"
 
 ## Support and Contact Details
 
