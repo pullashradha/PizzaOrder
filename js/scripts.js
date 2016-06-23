@@ -1,5 +1,5 @@
 // Business Logic
-var totalPrice = [];
+var totalPriceArray = [];
 function Cost (customSize, cheese) {
   this.customSize = customSize;
   this.sauce = 1;
@@ -9,7 +9,7 @@ function Cost (customSize, cheese) {
   this.meat = 2;
   this.pizzaPrice = 0;
   this.sidesPrice = 3;
-  this.totalPrice = [];
+  this.totalPriceArray = [];
 }
 Cost.prototype.pizzaOrder = function () {
   if (this.customSize === "Small 10 in.") {
@@ -36,12 +36,13 @@ Cost.prototype.pizzaOrder = function () {
 Cost.prototype.sidesOrder = function () {
   return this.sidesPrice;
 }
-// Cost.prototype.addOrder = function () {
-//   for (var i = 0; i <= this.totalPrice.length; i ++ ) {
-//     alert(this.totalPrice);
-//   }
-//   alert(this.totalPrice);
-// }
+Cost.prototype.addOrder = function () {
+  var cartTotalPrice = 0;
+  for (var i = 0; i < totalPriceArray.length; i ++) {
+    cartTotalPrice += totalPriceArray[i]; //////////////////////IMPORTANT!!! How to add contents of an array together
+  }
+  return cartTotalPrice;
+}
 
 
 //User Interface Logic
@@ -78,13 +79,11 @@ $(document).ready(function(event) {
     var pizzaDetails = (customSize + " - " + sauce + ", " + cheese + ", " + veggie1 + ", " + veggie2 + ", " + meat);
     var newPizzaCost = new Cost(customSize, cheese);
     newPizzaCost.pizzaOrder();
-    alert(newPizzaCost.pizzaPrice);
-    totalPrice.push(newPizzaCost.pizzaPrice);
-    alert(totalPrice);
+    totalPriceArray.push(newPizzaCost.pizzaPrice);
     // newPizzaCost.totalPrice.push(newPizzaCost.pizzaPrice);
     // alert(newPizzaCost.totalPrice);
     $("#pizza-details-dropdown").show();
-    $("#final-cost").text(totalPrice);
+    $("#final-cost").text(newPizzaCost.addOrder());
     $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
     $("#size, #sauce, #cheese, #veggie1, #veggie2, #meat").val("");
   });
@@ -95,18 +94,21 @@ $(document).ready(function(event) {
   var newSidesCost = new Cost();
   $("#breadsticks").click(function() {
     newSidesCost.sidesOrder();
+    totalPriceArray.push(newSidesCost.sidesPrice);
     $("#final-cost").text(newSidesCost.addOrder());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "3 garlic breadsticks" + "</li></ul>");
   });
   $("#brownie").click(function() {
     newSidesCost.sidesOrder();
+    totalPriceArray.push(newSidesCost.sidesPrice);
     $("#final-cost").text(newSidesCost.addOrder());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "1 jumbo, double-chocolate brownie" + "</li></ul>");
   });
   $("#soda").click(function() {
     newSidesCost.sidesOrder();
+    totalPriceArray.push(newSidesCost.sidesPrice);
     $("#final-cost").text(newSidesCost.addOrder());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "16oz., root-beer italian soda" + "</li></ul>");
