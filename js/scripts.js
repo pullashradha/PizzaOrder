@@ -1,16 +1,16 @@
 // Business Logic
 function Cost (customSize, cheese) {
-  this.customSize = $("select#size").val();
+  this.customSize = customSize;
   this.sauce = 1;
-  this.cheese = $("select#cheese").val();
+  this.cheese = cheese;
   this.veggie1 = 1;
   this.veggie2 = 1;
   this.meat = 2;
-  this.sides = 3;
   this.pizzaPrice = 0;
-  this.price = 0;
+  this.sidesPrice = 3;
+  this.totalPrice = 0;
 }
-Cost.prototype.pizza = function () {
+Cost.prototype.pizzaOrder = function () {
   if (this.customSize === "Small 10 in.") {
     this.pizzaPrice += 6;
   } else if (this.customSize === "Medium 14 in.") {
@@ -30,14 +30,14 @@ Cost.prototype.pizza = function () {
   this.pizzaPrice += this.veggie2;
   this.pizzaPrice += this.meat;
 
-  this.price += this.pizzaPrice;
+  return this.pizzaPrice;
 }
-Cost.prototype.sideOrder = function () {
-  this.price += this.sides;
+Cost.prototype.sidesOrder = function () {
+  return this.sidesPrice;
 }
-// Cost.prototype.addOrder = function () {
-//
-// }
+Cost.prototype.addOrder = function () {
+  return this.totalPrice += (this.sidesPrice + this.pizzaPrice);
+}
 
 
 //User Interface Logic
@@ -63,12 +63,6 @@ $(document).ready(function(event) {
     $("#landing-content").hide();
     $("#delivery-option").text("DELIVER TO: " + deliveryAddress);
   });
-  var newDefaultPizza = new Cost();
-  var newCostSides = new Cost();
-/////Custom Pizza Form
-  // $("#custom-pizza-btn").click(function() {
-  //   $("#custom-pizza").slideToggle();
-  // });
   $("form#custom-pizza").submit(function(event) {
     event.preventDefault();
     var customSize = $("select#size").val();
@@ -78,10 +72,10 @@ $(document).ready(function(event) {
     var veggie2 = $("select#veggie2").val();
     var meat = $("select#meat").val();
     var pizzaDetails = (customSize + " - " + sauce + ", " + cheese + ", " + veggie1 + ", " + veggie2 + ", " + meat);
-    var newCost = new Cost();
-    newCost.pizza();
+    var newPizzaCost = new Cost(customSize, cheese);
+    newPizzaCost.pizzaOrder();
     $("#pizza-details-dropdown").show();
-    $("#final-cost").text(newCost.price);
+    $("#final-cost").text(newPizzaCost.pizzaPrice);
     $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
     $("#size, #sauce, #cheese, #veggie1, #veggie2, #meat").val("");
   });
@@ -89,21 +83,22 @@ $(document).ready(function(event) {
     $("#pizza-details").toggle();
   });
 /////Side Orders
+  var newSidesCost = new Cost();
   $("#breadsticks").click(function() {
-    newCostSides.sideOrder();
-    $("#final-cost").text(newCostSides.price);
+    newSidesCost.sidesOrder();
+    $("#final-cost").text(newSidesCost.addOrder());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "3 garlic breadsticks" + "</li></ul>");
   });
   $("#brownie").click(function() {
-    newCostSides.sideOrder();
-    $("#final-cost").text(newCostSides.price);
+    newSidesCost.sidesOrder();
+    $("#final-cost").text(newSidesCost.addOrder());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "1 jumbo, double-chocolate brownie" + "</li></ul>");
   });
   $("#soda").click(function() {
-    newCostSides.sideOrder();
-    $("#final-cost").text(newCostSides.price);
+    newSidesCost.sidesOrder();
+    $("#final-cost").text(newSidesCost.addOrder());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "16oz., root-beer italian soda" + "</li></ul>");
   });
@@ -132,6 +127,18 @@ $(document).ready(function(event) {
 
 
 
+
+
+
+
+
+
+
+
+/////Custom Pizza Form
+  // $("#custom-pizza-btn").click(function() {
+  //   $("#custom-pizza").slideToggle();
+  // });
 
 // ///Default Pizza Toggle Btns
 //   $("#cheese-default").click(function() {
