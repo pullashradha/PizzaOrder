@@ -14,7 +14,7 @@
 
 ## Known Bugs
 
-* Clicking repeatedly on a standard pizza button or a sides order button shows the correct summation of the price to the Cart, but does not add more detailed links
+No known bugs.
 
 ## Specifications
 
