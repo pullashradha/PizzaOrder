@@ -1,4 +1,5 @@
 // Business Logic
+var totalPrice = [];
 function Cost (customSize, cheese) {
   this.customSize = customSize;
   this.sauce = 1;
@@ -8,7 +9,7 @@ function Cost (customSize, cheese) {
   this.meat = 2;
   this.pizzaPrice = 0;
   this.sidesPrice = 3;
-  this.totalPrice = 0;
+  this.totalPrice = [];
 }
 Cost.prototype.pizzaOrder = function () {
   if (this.customSize === "Small 10 in.") {
@@ -35,9 +36,12 @@ Cost.prototype.pizzaOrder = function () {
 Cost.prototype.sidesOrder = function () {
   return this.sidesPrice;
 }
-Cost.prototype.addOrder = function () {
-  return this.totalPrice += (this.sidesPrice + this.pizzaPrice);
-}
+// Cost.prototype.addOrder = function () {
+//   for (var i = 0; i <= this.totalPrice.length; i ++ ) {
+//     alert(this.totalPrice);
+//   }
+//   alert(this.totalPrice);
+// }
 
 
 //User Interface Logic
@@ -74,8 +78,13 @@ $(document).ready(function(event) {
     var pizzaDetails = (customSize + " - " + sauce + ", " + cheese + ", " + veggie1 + ", " + veggie2 + ", " + meat);
     var newPizzaCost = new Cost(customSize, cheese);
     newPizzaCost.pizzaOrder();
+    alert(newPizzaCost.pizzaPrice);
+    totalPrice.push(newPizzaCost.pizzaPrice);
+    alert(totalPrice);
+    // newPizzaCost.totalPrice.push(newPizzaCost.pizzaPrice);
+    // alert(newPizzaCost.totalPrice);
     $("#pizza-details-dropdown").show();
-    $("#final-cost").text(newPizzaCost.pizzaPrice);
+    $("#final-cost").text(totalPrice);
     $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
     $("#size, #sauce, #cheese, #veggie1, #veggie2, #meat").val("");
   });
