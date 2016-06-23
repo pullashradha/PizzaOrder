@@ -32,19 +32,6 @@ Cost.prototype.pizza = function () {
 Cost.prototype.sideOrder = function () {
   this.price += this.sides;
 }
-// Pizza.prototype.defaultCostSm = function () {
-//   this.price += 8;
-// }
-// Pizza.prototype.defaultCostMd = function () {
-//   this.price += 12;
-// }
-// Pizza.prototype.defaultCostLg = function () {
-//   this.price += 15;
-// }
-// Pizza.prototype.sidesCost = function () {
-//   this.price += 3;
-// }
-
 
 
 //User Interface Logic
@@ -71,7 +58,7 @@ $(document).ready(function(event) {
     $("#delivery-option").text("DELIVER TO: " + deliveryAddress);
   });
   var newCostSides = new Cost();
-/////Custom Pizza Btns
+/////Custom Pizza Form
   $("#custom-pizza-btn").click(function() {
     $("#custom-pizza").slideToggle();
   });
@@ -94,16 +81,16 @@ $(document).ready(function(event) {
   $("#pizza-details-dropdown").click(function() {
     $("#pizza-details").toggle();
   });
-/////Default Pizza Toggle Btns
-  // $("#cheese-default").click(function() {
-  //   $("#cheese-default-size").slideToggle();
-  // });
-  // $("#pep-default").click(function() {
-  //   $("#pep-default-size").slideToggle();
-  // });
-  // $("#veggie-default").click(function() {
-  //   $("#veggie-default-size").slideToggle();
-  // });
+///Default Pizza Toggle Btns
+  $("#cheese-default").click(function() {
+    $("#cheese-default-size").slideToggle();
+  });
+  $("#pep-default").click(function() {
+    $("#pep-default-size").slideToggle();
+  });
+  $("#veggie-default").click(function() {
+    $("#veggie-default-size").slideToggle();
+  });
 /////Cheese Default Pizza
 //   $("#cheese-sm").click(function() {
 //     newCheesePizzaSm.defaultCostSm();
@@ -164,7 +151,7 @@ $(document).ready(function(event) {
   // $("#default-pizza-dropdown").click(function() {
   //   $("#default-pizza-details").toggle();
   // });
-/////Sides
+/////Side Orders
   $("#breadsticks").click(function() {
     newCostSides.sideOrder();
     $("#final-cost").text(newCostSides.price);
@@ -186,9 +173,9 @@ $(document).ready(function(event) {
   $("#sides-dropdown").click(function() {
     $("#sides-details").toggle();
   });
-/////Checkout
-  // $("#checkout-btn").click(function() {
-  //   $("#landing-content").show();
-  //   $("#order-content").hide();
-  // });
+///Checkout Btn
+  $("#checkout-btn").click(function() {
+    $("#landing-content").show();
+    $("#order-content").hide();
+  });
 });
