@@ -25,16 +25,16 @@
     </div>
 <!-- Navbar End -->
 <!-- Landing Start -->
-    <!-- <div class="jumbotron" id="landing-content">
+    <div class="jumbotron" id="landing-content">
       <h1 class="page-header">Epicodus Pizza</h1>
       <h2 id="landing-tagline">Serving your daily pizza cravings! Available through online order only.</h2>
       <p>*Delivery only available in select states</p>
       <button type="btn" class="btn btn-primary" id="pickup-btn">Pickup</button>
       <button type="btn" class="btn btn-danger" id="delivery-btn">Delivery</button>
       <div class="form-group" id="address">
-        <h3>Delivery Address</h3> -->
-  <!-- Address Form Start -->
-        <!-- <form id="address-form">
+        <h3>Delivery Address</h3>
+<!-- Address Form Start -->
+        <form id="address-form">
           <div class="row">
             <div class="col-xs-6">
               <label for="first-name">First Name</label><input required type="text" class="form-control address-spacing">
@@ -64,10 +64,10 @@
             </div>
           </div>
           <button type="submit" class="btn btn-primary" id="order-proceed-btn">Submit</button>
-        </form> -->
-  <!-- Address Form End -->
-      <!-- </div>
-    </div> -->
+        </form>
+<!-- Address Form End -->
+      </div>
+    </div>
 <!-- Landing End -->
 <!-- Order Content Start -->
     <div class="jumbotron" id="order-content">
@@ -102,14 +102,12 @@
             </div>
           </div>
           <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button>
-  <!-- Custom Pizza Form Start -->
+<!-- Custom Pizza Form Start -->
           <form class="form-group" id="custom-pizza">
             <div id="form-content">
               <h3 id="form-header">Custom Pizza Form</h3>
               <div class="row container">
-                <div class="col-xs-6">
-                  <p>Size</p>
-                </div>
+                <div class="col-xs-6"><p>Size</p></div>
                 <div class="col-xs-6" class="form-option">
                   <select required class="form-control" id="size">
                     <option></option>
@@ -120,9 +118,7 @@
                 </div>
               </div>
               <div class="row container">
-                <div class="col-xs-6">
-                  <p>Sauce</p>
-                </div>
+                <div class="col-xs-6"><p>Sauce</p></div>
                 <div class="col-xs-6" class="form-option">
                   <select required class="form-control" id="sauce">
                     <option></option>
@@ -132,9 +128,7 @@
                 </div>
               </div>
               <div class="row container">
-                <div class="col-xs-6">
-                  <p>Cheese</p>
-                </div>
+                <div class="col-xs-6"><p>Cheese</p></div>
                 <div class="col-xs-6" class="form-option">
                   <select required class="form-control" id="cheese">
                     <option></option>
@@ -146,9 +140,7 @@
                 </div>
               </div>
               <div class="row container">
-                <div class="col-xs-6">
-                  <p>Veggie 1 (+$1)</p>
-                </div>
+                <div class="col-xs-6"><p>Veggie 1 (+$1)</p></div>
                 <div class="col-xs-6" class="form-option">
                   <select required class="form-control" id="veggie1">
                     <option></option>
@@ -161,9 +153,7 @@
                 </div>
               </div>
               <div class="row container">
-                <div class="col-xs-6">
-                  <p>Veggie 2 (+$1)</p>
-                </div>
+                <div class="col-xs-6"><p>Veggie 2 (+$1)</p></div>
                 <div class="col-xs-6" class="form-option">
                   <select required class="form-control" id="veggie2">
                     <option></option>
@@ -176,9 +166,7 @@
                 </div>
               </div>
               <div class="row container">
-                <div class="col-xs-6">
-                  <p>Meat (+$2)</p>
-                </div>
+                <div class="col-xs-6"><p>Meat (+$2)</p></div>
                 <div class="col-xs-6" class="form-option">
                   <select required class="form-control" id="meat">
                     <option></option>
@@ -192,15 +180,15 @@
             </div>
             <button type="submit" class="btn btn-danger" id="submit-custom-pizza">Place Order</button>
           </form>
-  <!-- Custom Pizza Form End -->
+<!-- Custom Pizza Form End -->
         </div>
-        <div class="col-xs-2" class="thumbnail">
+        <div class="col-xs-2">
           <h2>Sides</h2>
           <button type="btn" class="btn btn-info side-option" id="breadsticks">Breadsticks</button>
           <button type="btn" class="btn btn-info side-option" id="brownie">Brownie</button>
           <button type="btn" class="btn btn-info side-option" id="soda">Italian Soda</button>
         </div>
-  <!-- Price Start -->
+<!-- Cart Start -->
         <div class="col-xs-4" id="price-content">
           <h1 class="page-header">Cart</h1>
           <h2>Price: $ <span id="final-cost"></span></h2>
@@ -215,7 +203,7 @@
           <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
           <h3><span id="delivery-option"></span></h3>
         </div>
-  <!-- Price End -->
+<!-- Cart End -->
       </div>
     </div>
 <!-- Order Content End -->

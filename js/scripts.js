@@ -29,7 +29,6 @@ Order.prototype.pizzaCost = function () {
   this.pizzaPrice += this.veggie1;
   this.pizzaPrice += this.veggie2;
   this.pizzaPrice += this.meat;
-
   return this.pizzaPrice;
 }
 Order.prototype.sideCost = function () {
@@ -37,14 +36,17 @@ Order.prototype.sideCost = function () {
 }
 Order.prototype.finalCost = function () {
   var cartTotalPrice = 0;
-  alert (totalPriceArray);
   for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement ++) {
     cartTotalPrice += totalPriceArray[arrayElement]; //////////////////////IMPORTANT!!! How to add contents of an array together
   }
   return cartTotalPrice;
 }
-function Address () {
-
+function Address (streetAddress, city, state, zipcode) {
+  this.streetAddress = streetAddress;
+  this.city = city;
+  this.state = state;
+  this.zipcode = zipcode;
+  this.deliveryAddress = (streetAddress + "  " + city + ", " + state + "  " + zipcode);
 }
 
 
@@ -63,13 +65,13 @@ $(document).ready(function(event) {
   $("form#address-form").submit(function(event) {
     event.preventDefault();
     var streetAddress = $("input#street-add").val();
-    var cityAddress = $("input#city-add").val();
-    var stateAddress = $("select#state-select").val();
-    var zipCode = $("input#zip-add").val();
-    var deliveryAddress = (streetAddress + "  " + cityAddress + ", " + stateAddress + "  " + zipCode);
+    var city = $("input#city-add").val();
+    var state = $("select#state-select").val();
+    var zipcode = $("input#zip-add").val();
+    var newAddress = new Address(streetAddress, city, state, zipcode)
     $("#order-content").show();
     $("#landing-content").hide();
-    $("#delivery-option").text("DELIVER TO: " + deliveryAddress);
+    $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
   });
   $("form#custom-pizza").submit(function(event) {
     event.preventDefault();
@@ -119,8 +121,7 @@ $(document).ready(function(event) {
   });
 ///Checkout Btn
   $("#checkout-btn").click(function() {
-    $("#landing-content").show();
-    $("#order-content").hide();
+    location.reload();
   });
 });
 
