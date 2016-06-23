@@ -25,16 +25,16 @@
     </div>
 <!-- Navbar End -->
 <!-- Landing Start -->
-    <!-- <div class="jumbotron" id="landing-content">
+    <div class="jumbotron" id="landing-content">
       <h1 class="page-header">Epicodus Pizza</h1>
       <h2 id="landing-tagline">Serving your daily pizza cravings! Available through online order only.</h2>
       <p>*Delivery only available in select states</p>
       <button type="btn" class="btn btn-primary" id="pickup-btn">Pickup</button>
       <button type="btn" class="btn btn-danger" id="delivery-btn">Delivery</button>
       <div class="form-group" id="address">
-        <h3>Delivery Address</h3> -->
+        <h3>Delivery Address</h3>
   <!-- Address Form Start -->
-        <!-- <form id="address-form">
+        <form id="address-form">
           <div class="row">
             <div class="col-xs-6">
               <label for="first-name">First Name</label><input required type="text" class="form-control address-spacing">
@@ -64,10 +64,10 @@
             </div>
           </div>
           <button type="submit" class="btn btn-primary" id="order-proceed-btn">Submit</button>
-        </form> -->
+        </form>
   <!-- Address Form End -->
-      <!-- </div>
-    </div> -->
+      </div>
+    </div>
 <!-- Landing End -->
 <!-- Order Content Start -->
     <div class="jumbotron" id="order-content">
@@ -75,7 +75,7 @@
       <div class="row">
         <div class="col-xs-6">
           <h2>Pizza</h2>
-          <div class="row container">
+          <div class="row container" id="default-pizzas">
             <div class="col-xs-4">
               <button type="btn" class="btn btn-success pizza-option" id="cheese-default">Cheese Pizza</button>
               <div class="default-pizzas" id="cheese-default-size">
@@ -206,9 +206,9 @@
           <h2>Price: $ <span id="final-cost"></span></h2>
           <div id="order-details">
             <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
-            <p><span id="pizza-details"></span></p>
+            <ul id="pizza-details"></ul>
             <p><a id="default-pizza-dropdown">Pizza</a></p>
-            <p><span id="default-pizza-details"></span></p>
+            <ul id="default-pizza-details"></ul>
             <p><a id="sides-dropdown">Sides</a></p>
             <ul id="sides-details"></ul>
           </div>

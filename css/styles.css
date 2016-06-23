@@ -134,6 +134,10 @@ ul {
 
 /*<--------------------Default Orders Styling---------------->*/
 
+#default-pizzas {
+  display: none;
+}
+
 .pizza-option, .side-option {
   width: 170px;
   height: 180px;
