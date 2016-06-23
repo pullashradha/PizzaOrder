@@ -1,6 +1,7 @@
 // Business Logic
 var totalPriceArray = [];
 function Order (customSize, cheese) {
+  // this.totalPriceArray = [];
   this.customSize = customSize;
   this.sauce = 1;
   this.cheese = cheese;
@@ -85,6 +86,7 @@ $(document).ready(function(event) {
     var newPizzaOrder = new Order(customSize, cheese);
     newPizzaOrder.pizzaCost();
     totalPriceArray.push(newPizzaOrder.pizzaPrice);
+    // newPizzaOrder.totalPriceArray.push(newPizzaOrder.pizzaPrice);
     $("#pizza-details-dropdown").show();
     $("#final-cost").text(newPizzaOrder.finalCost());
     $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
@@ -98,6 +100,7 @@ $(document).ready(function(event) {
   $("#breadsticks").click(function() {
     newSideOrder.sideCost();
     totalPriceArray.push(newSideOrder.sidePrice);
+    // newSideOrder.totalPriceArray.push(newSideOrder.sidePrice);
     $("#final-cost").text(newSideOrder.finalCost());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "3 garlic breadsticks" + "</li></ul>");
@@ -105,6 +108,7 @@ $(document).ready(function(event) {
   $("#brownie").click(function() {
     newSideOrder.sideCost();
     totalPriceArray.push(newSideOrder.sidePrice);
+    // newSideOrder.totalPriceArray.push(newSideOrder.sidePrice);
     $("#final-cost").text(newSideOrder.finalCost());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "1 jumbo, double-chocolate brownie" + "</li></ul>");
@@ -112,6 +116,7 @@ $(document).ready(function(event) {
   $("#soda").click(function() {
     newSideOrder.sideCost();
     totalPriceArray.push(newSideOrder.sidePrice);
+    // newSideOrder.totalPriceArray.push(newSideOrder.sidePrice);
     $("#final-cost").text(newSideOrder.finalCost());
     $("#sides-dropdown").show();
     $("#sides-details").append("<ul><li>" + "16oz., root-beer italian soda" + "</li></ul>");
