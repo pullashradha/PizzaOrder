@@ -20,16 +20,12 @@
 
 The program should handle: | Example Input | Example Output
 ----- | ----- | -----
-The user is taken to the order page if they click the "pickup" button | ----- | -----
-The user is asked to input their address if they click the "deliver" button  | -----  | -----
-The user is taken to the order page when they click the "Submit" button on the address page| ----- | -----
-If the user clicks on any of the standard pizza buttons, a slide down price bar is shown | ----- | -----
-If the user clicks any of the buttons on the slide down price bar, the price of the individual item will show in the Cart column on the right of the screen | ----- | ------
-If the user clicks on the "Custom Pizza" button, a dropdown form will appear | ----- | -----
-The user can customize their pizza according to the options given in the form | ----- | -----
-Once the user clicks the "Place Order" button on the custom pizza form, the total price of the custom order is shown in the Cart column, the form refreshes | ----- | -----
-When an item is added to the Cart column, a link with the general item name will appear | ----- | -----
-The links in the Cart column can be clicked on to view the details of the individual item order | ----- | -----
+The program will determine the price of a custom pizza based on the options selected in the form | Custom Pizza Form: Size-Small, 10"; Sauce-Alfredo; Cheese-Cheese; Veggie 1-Onions; Veggie 2-Green Peppers; Meat-Sausage | $12
+Once the user clicks the "Place Order" button on the custom pizza form, the total price of the custom order is shown in the Cart column, while the form refreshes | Cart: Price $, and user submits form for a small pizza with regular cheese | Cart: Price $12
+The program will add $3 to the Cart price when a Sides button is clicked | Cart: Price $, and the user clicks the "Italian Soda" button | Cart: Price $3
+When an item is added to the Cart column, a link with the general item name will appear | Cart, and user clicks on "Brownie" button | Cart: Sides
+The links in the Cart column can be clicked on to view the details of the individual item order | Cart: Sides, and user clicks "Sides" text link | Cart: Sides - "3 garlic breadsticks"
+For each item added to the Cart, the details will append in list form under the proper food category | Cart: Sides - "3 garlic breadsticks", and user clicks "Breadsticks" button   | Cart: Sides - "3 garlic breadsticks", :"3 garlic breadsticks"
 
 ## Support and Contact Details
 
