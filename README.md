@@ -29,7 +29,7 @@ For each item added to the Cart, the details will append in list form under the 
 
 ## Future Features
 
-HTML | CSS Styling | JavaScript
+HTML | CSS | JavaScript
 ----- | ----- | -----
 ----- | Make Orders page responsive | Add default/pre-made pizza buttons to Orders page-header
 ----- | Add high-resolution pictures of food to Orders page | Clean up repetitive code in UI Logic
