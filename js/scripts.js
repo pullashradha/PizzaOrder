@@ -1,5 +1,5 @@
 // Business Logic
-var totalPriceArray = [];
+var totalPriceArray = []; //Only global variable in code
 function Order (customSize, cheese) {
   this.customSize = customSize;
   this.sauce = 1;

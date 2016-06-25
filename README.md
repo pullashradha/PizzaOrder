@@ -27,6 +27,13 @@ When an item is added to the Cart column, a link with the general item name will
 The links in the Cart column can be clicked on to view the details of the individual item order | Cart: Sides, and user clicks "Sides" text link | Cart: Sides - "3 garlic breadsticks"
 For each item added to the Cart, the details will append in list form under the proper food category | Cart: Sides - "3 garlic breadsticks", and user clicks "Breadsticks" button   | Cart: Sides - "3 garlic breadsticks"; "3 garlic breadsticks"
 
+## Future Features
+
+HTML | CSS Styling | JavaScript
+----- | ----- | -----
+----- | Make Orders page responsive | Add default/pre-made pizza buttons to Orders page-header
+----- | Add high-resolution pictures of food to Orders page | Clean up repetitive code in UI Logic
+
 ## Support and Contact Details
 
 Contact Epicodus for support in running this program.
