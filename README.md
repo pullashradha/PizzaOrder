@@ -10,7 +10,7 @@ This program allow a user to create a custom pizza and shows the total of their 
 
 ## Setup/Installation Requirements
 
-This program can only be accessed on computer with Git and Atom installed.
+This program can only be accessed on a computer with Git and Atom installed.
 
 * Clone this repository
 * Open index.html in Terminal
